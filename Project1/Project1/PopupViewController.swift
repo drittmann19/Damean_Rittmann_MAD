@@ -54,6 +54,7 @@ class PopupViewController: UIViewController {
     
     @IBOutlet weak var frontImage: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
+    @IBOutlet weak var mealLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -66,6 +67,29 @@ class PopupViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func forwardButton(_ sender: UIBarButtonItem) {
+        if mealNum < mealArray.count - 1{
+            mealNum = mealNum + 1
+        }
+        updatePicture()
+    }
+    
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        if mealNum > 0{
+            mealNum = mealNum - 1
+        }
+        updatePicture()
+    }
+    
+    func updatePicture(){
+        pictureNum = mealArray[mealNum]
+        frontImage.image=UIImage(named: frontPictures[pictureNum]!)
+        backImage.image = UIImage(named: backPictures[pictureNum]!)
+        mealLabel.text = String(mealNum + 1)
+    }
+    
+    
     
 
     /*

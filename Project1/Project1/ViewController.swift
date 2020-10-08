@@ -8,16 +8,17 @@
 
 import UIKit
 
-var pickerList = [Int]()
-var mealNum = 1
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var sliderNum: UILabel!
+    var pickerList = [Int]()
+    
+    @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var chickenSwitch: UISwitch!
     @IBOutlet weak var porkSwitch: UISwitch!
     @IBOutlet weak var beefSwitch: UISwitch!
     @IBOutlet weak var vegSwitch: UISwitch!
+    @IBOutlet weak var sliderValue: UISlider!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mealPopup"{
@@ -33,8 +34,7 @@ class ViewController: UIViewController {
     }
     
     func createMealArray() -> Array<Int> {
-        //put all of this inside func prepare(for segue:)?
-        //mealNum = Int(sliderVal.value)
+        let mealNum = Int(round(sliderValue.value))
         print(mealNum)
         
         var meals = [Int]()
@@ -65,11 +65,12 @@ class ViewController: UIViewController {
         return meals
     }
     
-    @IBAction func mealSlider(_ sender: UISlider) {
+    @IBAction func sliderMove(_ sender: UISlider){
         let num = sender.value
-        sliderNum.text = String(format: "%.0f", num)
-        mealNum = Int(num)
+        sliderLabel.text = String(format: "%.0f", num)
+        print(sliderValue.value)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +79,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func unwindSegue(_ segue:UIStoryboardSegue){
-        
+        sliderValue.value = 3
+        sliderLabel.text = "3"
+        pickerList = []
     }
     
 
