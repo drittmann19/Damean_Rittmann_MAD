@@ -89,6 +89,11 @@ class PopupViewController: UIViewController {
         mealLabel.text = String(mealNum + 1)
     }
     
+    @IBAction func saveImages(_ sender: UIBarButtonItem) {
+        pictureNum = mealArray[mealNum]
+        UIImageWriteToSavedPhotosAlbum(UIImage(named: frontPictures[pictureNum]!)!, nil, nil, nil) //https://www.youtube.com/watch?v=RRjG2n60hNU
+        UIImageWriteToSavedPhotosAlbum(UIImage(named: backPictures[pictureNum]!)!, nil, nil, nil) //https://www.youtube.com/watch?v=RRjG2n60hNU
+    }
     
     
 
