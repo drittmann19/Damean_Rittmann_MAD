@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
     
     func createMealArray() -> Array<Int> {
-        let mealNum = Int(round(sliderValue.value))
+        var mealNum = Int(round(sliderValue.value))
         print(mealNum)
         
         var meals = [Int]()
@@ -52,8 +52,16 @@ class ViewController: UIViewController {
             pickerList.append(contentsOf: [14,15,16,17,18])
         }
         
+        if pickerList.count < mealNum{
+            print("here")
+            let alert = UIAlertController(title: "Warning", message: "Not enough meals to choose from. Decrease number of meals or add meal types", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+            mealNum = 1
+            sliderValue.value = 1
+        }
         //check if length of pickerlist is bigger than mealnum, send alert if not
-        
         //randomly pick meals from array
         for i in 1...mealNum{
             let length = pickerList.count
