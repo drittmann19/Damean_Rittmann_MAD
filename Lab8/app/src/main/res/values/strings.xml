@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Lab 8</string>
+    <string name="title">Cupcake Maker</string>
+    <string name="radioRed">Red Velvet</string>
+    <string name="radioYellow">Yellow</string>
+    <string name="radioChocolate">Chocolate</string>
+    <string name="createButton">Create your Cupcake</string>
+    <string name="chocolateCheck">Chocolate Frosting</string>
+    <string name="vanillaCheck">Vanilla Frosting</string>
+    <string name="sprinklesCheck">Sprinkles</string>
+    <string name="candyCheck">Candy</string>
+    <string name="typeLabel">Type of Cupcake</string>
+    <string name="toppingsLabel">Toppings</string>
+    <string name="amountLabel">How many would you like?</string>
+    <string name="frostingLabel">Type of Frosting</string>
+    <string name="vanillaSwitch">Vanilla</string>
+    <string name="chocolateSwitch">Chocolate</string>
+    <string-array name="amount">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+</resources>
