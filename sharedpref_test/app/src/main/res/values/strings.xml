@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">sharedpref_test</string>
+    <string name="save_button">save</string>
+</resources>
