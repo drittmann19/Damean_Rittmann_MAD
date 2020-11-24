@@ -41,13 +41,7 @@ class ReviewActivity : AppCompatActivity() {
         intent.action = Intent.ACTION_VIEW
         intent.data = cakeShopUrl?.let {Uri.parse(cakeShopUrl)}
         //Log.i("test1", intent.data.toString())
-
-        //verify
-        if (intent.resolveActivity(packageManager) != null){
-            startActivity(intent)
-        }else{
-            Log.i("test2", "here")
-        }
+        startActivity(intent)
     }
 
     override fun onBackPressed() {
