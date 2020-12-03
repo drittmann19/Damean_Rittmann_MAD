@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateUI(){
-        //total = String.format("%.2f", total).toDouble()
+
         totalAmountText.text = "$" + String.format("%.2f", myExpenseTotals.total)
         wantAmountText.text = "$" + String.format("%.2f", myExpenseTotals.wantTotal)
 
@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    ////https://www.youtube.com/watch?v=S5uLAGnBvUY&ab_channel=CodePalace
     private fun saveData() {
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
@@ -86,6 +87,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //https://www.youtube.com/watch?v=S5uLAGnBvUY&ab_channel=CodePalace
     private fun loadData() {
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val totalString = sharedPreferences.getString("totalString", null)
