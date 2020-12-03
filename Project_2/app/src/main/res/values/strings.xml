@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Project_2</string>
+    <string name="totalTitle">total spent this month</string>
+    <string name="descriptionText">of purchases spent on wants instead of needs</string>
+    <string name="clearButtonText">Clear Data</string>
+    <string name="addTitle">Add Expense</string>
+    <string name="needRadio">Need</string>
+    <string name="wantButton">Want</string>
+    <string name="amountHint">Amount</string>
+    <string name="dollarSign">$</string>
+    <string name="enterButtonText">Enter</string>
+</resources>
